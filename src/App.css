@@ -1,0 +1,373 @@
+  /* styles.css */
+
+  body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    background-color: #333;
+    color: #fff;
+  }
+
+  .logo {
+    order: 1;
+  }
+  .logo img{
+    width: 12rem;
+  }
+
+  .nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    order: 2;
+  }
+
+  .nav-group {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  .nav-group a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .order-login {
+    order: 3;
+  }
+
+  .order-btn {
+    background-color: #528975;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    animation: pulse 1.5s infinite;
+    margin: 0 2rem;
+  }
+
+  .order-btn:hover {
+    transform: scale(1.1);
+  }
+  .login-icon {
+    margin-left: 10px;
+  }
+
+  .hamburger {
+    display: none;
+    order: 4;
+    cursor: pointer;
+  }
+
+  .mobile-menu {
+    display: none;
+  }
+
+  @media (max-width: 760px) {
+    .nav-links {
+      display: none;
+    }
+
+    .hamburger {
+      display: block;
+    }
+
+    .mobile-menu {
+      display: flex;
+      flex-direction: column;
+      background-color: #333;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      width: 150px;
+    }
+
+    .mobile-menu a {
+      padding: 10px;
+      text-align: center;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  /* styles.css */
+
+/* ... (previous styles) */
+
+.nav-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  border-radius: 0.5rem;
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+.width-fix{
+  width: 8rem;
+}
+
+.nav-dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-content a {
+  text-align: left;
+  color: #040404;
+  padding: 10px;
+  text-decoration: none;
+}
+/* styles.css */
+
+/* ... (previous styles) */
+
+.sub-dropdown {
+  position: relative;
+  display: inline-block;
+  width: 20rem;
+  padding: 0.5rem;
+}
+
+.sub-dropdown-content {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+}
+
+.sub-dropdown:hover .sub-dropdown-content {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+}
+
+.sub-dropdown-content a {
+
+  color: #040404;
+  padding: 10px;
+  text-decoration: none;
+}
+
+/* ... (remaining styles) */
+/* GridComponent.css */
+
+.grid-container {
+  width: 100vw;
+  height: 80vh;
+  display: grid;
+  background-color: linear-gradient(107deg,#dde1e2 3.78%,#d7d7d7 99.61%);
+  grid-template-columns: repeat(5, 1fr); /* 5 columns by default */
+  
+}
+
+.grid-item {
+  background-color: #eee;
+  text-align: center;
+}
+
+.item1 {
+  grid-column: span 3; /* Takes up 3 columns */
+  padding: 1rem 0rem 1rem 4rem;
+}
+
+.item2 {
+  grid-column: span 2; /* Takes up 2 columns */
+  display: flex;
+  align-items: center;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 1000px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr); /* 1 column for screens up to 768px */
+  }
+
+  .item2 {
+    display: none; /* Hide the second div on smaller screens */
+  }
+}
+
+.item1-body {
+  display: flex;
+}
+@media (max-width: 1000px) {
+  .item1-body{
+    flex-direction: column;
+  }
+}
+.item1-heading h1 {
+  color: #21383e;
+}
+.item1-heading h2 {
+  color: #68797e;
+  font-weight: 100;
+}
+
+/* PriceCalculatorForm.css */
+
+.price-calculator {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 2rem;
+  background-color:linear-gradient(107deg,#dde1e2 3.78%,#d7d7d7 99.61%);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add this line for box shadow */
+}
+
+.flash-text {
+  color: #ff0000; /* Red color for the flashing text */
+  font-size: 14px;
+  margin-bottom: 10px;
+  animation: flashAnimation 1s infinite alternate;
+}
+
+.page-counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.page-counter-content {
+  display: flex;
+  align-items: center;
+}
+.page-counter-content input{
+  text-align: center;
+  width: 8rem;
+  color: #837d7dcc;
+
+}
+
+input {
+  border-radius: 0.2rem;
+  border: 0.5px solid black;
+}
+button {
+  color: #21383e;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+@keyframes flashAnimation {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.price-calculator-form{
+ display: flex;
+ flex-direction: column;
+ padding: 1rem 2rem;
+ gap: 1rem;
+}
+.price-calculator h1{
+  color: #21383e;
+  font-size: 1rem;
+}
+.price-calculator-form label {
+  color: #21383e;
+  font-weight: bold;
+}
+.price-calculator-form input {
+ padding: 0.3rem 0.8rem;
+}
+
+.price-calculator-footer{
+  display: flex;
+  justify-content: space-around;
+  background: linear-gradient(177deg,#303a4f 2.72%,#21383e 69.5%,#10141f 139.12%);
+  padding: 0.5rem;
+  margin: -1.3rem;
+  border-radius: 0 0 2rem 2rem;
+}
+.price-calculator-footer label{
+  background-color: #528975;
+  color: #fff;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 2rem;
+
+}
+.price-calculator-footer span{
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+.item2-body ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  list-style-type: none;
+}.item2-body li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 18px;
+  text-align: left;
+  width: 100%;
+  padding-bottom: 0.5rem;
+}
+.item1-body li svg {
+  width: 30px;;
+}
+.item1-button button{
+  font-size: 15px;
+  background-color: #305f63;
+  color: #fff;
+  padding: 1rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 2rem;
+  animation: pulse 1.5s infinite;
+}
+.item1-footer p{
+  text-align: left;
+  font-size: 15px;
+}
+.item1-footer{
+  padding: 1.5rem;
+}
+.item2-img {
+  width: 40rem;
+}
+
+@keyframes pulse {
+  0%  {
+      box-shadow: inset 0 0 0 5px #fff6, 0 0 0 0 #2a642e;
+  }
+
+    100% {
+      box-shadow: inset 0 0 0 3px #7575ff33, 0 0 0 15px #fff0;
+  }
+}
